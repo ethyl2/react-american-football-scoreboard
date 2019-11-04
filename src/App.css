@@ -117,12 +117,14 @@
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
 .awayButtons__fieldGoal,
+.downButton,
 .quarterButton,
 .ballOnButton {
   margin: 1rem;
   border-radius: 4px;
 }
 
+.downButton,
 .quarterButton,
 .ballOnButton {
   background: #0b5402;

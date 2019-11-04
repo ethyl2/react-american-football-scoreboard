@@ -10,8 +10,11 @@ function App() {
   // another for the away score.
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
+  const [downNum, setDownNum] = useState(1);
+  const [toGoNum, setToGoNum] = useState(49);
+  const [ballOnNum, setBallOnNum] = useState(1);
   const [quarterNum, setQuarterNum] = useState(1);
-  const [ballOnNum, setBallOnNum] = useState(21);
+  
   
 
   return (
@@ -32,13 +35,19 @@ function App() {
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow quarterNum = {quarterNum} ballOnNum = {ballOnNum}/>
+        <BottomRow downNum={downNum}
+          toGoNum={toGoNum} 
+          ballOnNum = {ballOnNum} 
+          quarterNum = {quarterNum}
+         />
       </section>
       
       <ButtonBox setHomeScore={setHomeScore}
         setAwayScore={setAwayScore}
-        setQuarterNum={setQuarterNum}
+        setDownNum={setDownNum}
+        setToGoNum={setToGoNum}
         setBallOnNum={setBallOnNum}
+        setQuarterNum={setQuarterNum}
       />
     </div>
   );
