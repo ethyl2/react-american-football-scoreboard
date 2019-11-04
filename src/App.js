@@ -7,7 +7,7 @@ import BottomRow from "./BottomRow";
 import ButtonBox from "./ButtonBox";
 
 function App() {
-  //TODO: STEP 2 - Establish your applictaion's state with some 
+  //TODO: STEP 2 - Establish your application's state with some 
   // useState hooks.  You'll need one for the home score and 
   // another for the away score.
   const [homeScore, setHomeScore] = useState(0);
