@@ -9,6 +9,8 @@ function App() {
   // another for the away score.
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
+  const [quarterNum, setQuarterNum] = useState(1);
+  const [ballOnNum, setBallOnNum] = useState(21);
   
 
   return (
@@ -29,7 +31,7 @@ function App() {
             <div className="away__score">{awayScore}</div>
           </div>
         </div>
-        <BottomRow />
+        <BottomRow quarterNum = {quarterNum} ballOnNum = {ballOnNum}/>
       </section>
       <section className="buttons">
         <div className="homeButtons">
@@ -46,6 +48,24 @@ function App() {
             setAwayScore(currentAwayScore => currentAwayScore + 7)}}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => {
             setAwayScore(currentAwayScore => currentAwayScore + 3)}}>Away Field Goal</button>
+        </div>
+        <div className="secondRowDisplayButtons">
+          <button className="quarterButton" onClick={() => {
+            setQuarterNum(currentQuarterNum => {
+              let newNum = currentQuarterNum + 1;
+              if(newNum> 4) {
+                newNum = newNum %4;
+              }
+              return newNum;
+          })}}>Advance to Next Quarter</button>
+          <button className="ballOnButton" onClick={() => {
+            setBallOnNum(currentBallOn => {
+              let newNum = currentBallOn + 1;
+              if(newNum> 53) {
+                newNum = newNum %53;
+              }
+              return newNum;
+          })}}>Advance Ball On</button>
         </div>
         
       </section>
