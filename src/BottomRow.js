@@ -10,11 +10,11 @@ const BottomRow = (props) => {
         <div className="down__value">{props.downNum}</div>
       </div>
       <div className="toGo">
-        <h3 className="toGo__title">To Go</h3>
+        <h3 className="toGo__title">Spaces To Go</h3>
         <div className="toGo__value">{props.toGoNum}</div>
       </div>
       <div className="ballOn">
-        <h3 className="ballOn__title">Ball on</h3>
+        <h3 className="ballOn__title">Gingerbread Man On</h3>
         <div className="ballOn__value">{props.ballOnNum}</div>
       </div>
       <div className="quarter">
